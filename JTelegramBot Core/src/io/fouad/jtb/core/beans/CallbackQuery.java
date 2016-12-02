@@ -44,6 +44,12 @@ public class CallbackQuery
 	private String id;
 	
 	/**
+	 * Unique identifier for this query.
+	 */	
+	@JsonProperty("chat_instance")
+	private String chat_instance;
+	
+	/**
 	 * Sender.
 	 */
 	@JsonProperty("from")
