@@ -24,6 +24,7 @@
 
 package io.fouad.jtb.core.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -31,6 +32,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * query that was chosen by the user and sent to
  * their chat partner.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ChosenInlineResult
 {
 	/**

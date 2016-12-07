@@ -24,14 +24,18 @@
 
 package io.fouad.jtb.core.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * This object represents an incoming update.
  * Only one of the optional parameters can be present in any given update.
  */
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Update
 {
+
 	/**
 	 * The update‘s unique identifier. Update identifiers start from a certain
 	 * positive number and increase sequentially. This ID becomes especially
@@ -41,6 +45,7 @@ public class Update
 	 */
 	@JsonProperty("update_id")
 	private int updateId;
+	
 	
 	/**
 	 * Optional. New incoming message of any kind — text, photo, sticker, etc.

@@ -24,12 +24,14 @@
 
 package io.fouad.jtb.core.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.fouad.jtb.core.enums.ChatType;
 
 /**
  * This object represents a chat.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Chat
 {
 	/**

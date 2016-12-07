@@ -24,6 +24,7 @@
 
 package io.fouad.jtb.core.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -35,6 +36,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * inline mode), the field inline_message_id will be
  * presented.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CallbackQuery
 {
 	/**

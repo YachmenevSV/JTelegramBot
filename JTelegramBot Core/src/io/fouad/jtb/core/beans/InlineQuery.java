@@ -24,6 +24,7 @@
 
 package io.fouad.jtb.core.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -31,6 +32,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * When the user sends an empty query, your bot
  * could return some default or trending results.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class InlineQuery
 {
 	/**

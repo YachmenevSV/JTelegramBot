@@ -24,6 +24,7 @@
 
 package io.fouad.jtb.core.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Arrays;
@@ -31,6 +32,7 @@ import java.util.Arrays;
 /**
  * This class represents a Telegram message.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Message
 {
 	/**
